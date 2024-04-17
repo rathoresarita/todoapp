@@ -79,7 +79,7 @@ const TodoApp = () => {
         <div>
 
             <div className='app-wrapper'>
-            <ToastContainer />
+                <ToastContainer />
                 <div className='app'>
                     <div className="input-container">
                         <label htmlFor="name">Name</label>
@@ -99,68 +99,3 @@ const TodoApp = () => {
 
 export default TodoApp
 
-// TodoApp.js
-// import React, { useState } from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
-// import { addTodo, deleteTodo, completeTodo } from '../Reducer/reduxToolkit';
-// import TodoList from './TodoList';
-
-// const TodoApp = () => {
-//     const [name, setName] = useState('');
-//     const [des, setDes] = useState('');
-//     const [showLists, setShowLists] = useState(false);
-
-//     const tasks = useSelector(state => state.todos);
-
-//     const dispatch = useDispatch();
-
-//     const handleInputName = (e) => {
-//         setName(e.target.value);
-//     }
-
-//     const handleInputDes = (e) => {
-//         setDes(e.target.value);
-//     }
-
-//     const handleDelete = (id) => {
-//         dispatch(deleteTodo(id));
-//     }
-
-//     const handleAdd = () => {
-//         if (name.trim() !== '' && des.trim() !== '') {
-//             dispatch(addTodo({
-//                 name,
-//                 des,
-//                 completed: false
-//             }));
-//             setName('');
-//             setDes('');
-//             setShowLists(true);
-//         }
-//     };
-
-//     const handleComplete = (id) => {
-//         dispatch(completeTodo(id));
-//     };
-
-//     return (
-//         <div>
-//             <div className='app-wrapper'>
-//                 <div className='app'>
-//                     <div className="input-container">
-//                         <label htmlFor="name">Name</label>
-//                         <input id='name' className='input-name' type="text" value={name} onChange={handleInputName} />
-//                     </div>
-//                     <div className="input-container">
-//                         <label htmlFor="des">Description</label>
-//                         <input id='des' type="text" value={des} onChange={handleInputDes} />
-//                     </div>
-//                     <button id='add' onClick={handleAdd}>Add</button>
-//                 </div>
-//             </div>
-//             {showLists && <TodoList tasks={tasks} onDelete={handleDelete} onComplete={handleComplete} />}
-//         </div>
-//     );
-// }
-
-// export default TodoApp;
