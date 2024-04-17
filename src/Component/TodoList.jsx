@@ -3,7 +3,7 @@ import React from 'react';
 import '../css/list.css';
 
 const TodoList = ({ tasks, onDelete, onComplete }) => {
-  console.log('taskkkksss', tasks);
+ 
 
   return (
     <div className='list'>
